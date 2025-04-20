@@ -3,7 +3,7 @@ title: "ZENNをGitHub連携で始めてみる"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["zenn","zenncli","github","git","vscode"]
-published: false
+published: true
 ---
 
 ZENNをGitHub連携で始めるためにやったことまとめ。
@@ -83,14 +83,13 @@ $ git push origin main
 ```
   * ブラウザ認証が出るのでやる
   * 普段の業務ではSSHでやってたのに、今回何故かHTTPSでcloneしたから思ってた手順と違った(ブラウザ認証なんてできるの知らなかった)
-  * TODOメモ SSHで認証するように変更したい
 2. GitHub上で確認できればOK
 https://github.com/cdaket/zenn/commit/9c91366ba9ac343535e464e27a02c4c1efb71881
 ## 記事を書く
 1. VSCodeをインストールする
   * vimでmarkdown書くのしんどかったので入れる
   * 公式サイトからダウンロード
-https://azure.microsoft.com/ja-jp/products/visual-studio-code
+  https://azure.microsoft.com/ja-jp/products/visual-studio-code
 2. VSCodeでzennディレクトリを開く
 3. 記事のファイルを開く
 4. Ctrl+K V でプレビューを見ながら書ける
@@ -105,9 +104,19 @@ $ npx zenn preview
   * http://localhost:8000 で記事のプレビューが見れる。
   * ※手動保存忘れずに。AutoSave有効化してもいいかも。
 # 記事を公開する
-1. 下記コマンド実行
+1. title決める
+2. emojiはよくわからないのでそのまま
+3. topics設定する
+  * 5個までらしい
+  * 公式サイトで検索して良い感じのを設定する
+4. publishedをtrueにする
+5. 下記コマンドを実行する
 ```
 $ git add .
-$ git commit -m "first commit"
+$ git commit -m "ZENNをGitHub連携で始めてみる 公開"
 $ git push origin main
 ```
+# TODOメモ
+* SSHで認証するように変更したい
+* Markdownの書き方を学んで良い感じにしたい
+* 日々のメモで公開できることは記事にしていきたい
